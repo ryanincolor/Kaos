@@ -1,9 +1,28 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var nodemon = require('nodemon');
+var sass = require('gulp-sass');
 
-gulp.task('default', ['browser-sync'], function() {
+var reload = browserSync.reload;
 
+gulp.task('sass', function () {
+  return gulp.src('sass/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed', sourceComments: 'map'}).on('error', sass.logError))
+    .pipe(gulp.dest('public/styles'))
+    .pipe(reload({stream:true}));
+});
+
+
+gulp.task('pug', function() {
+   return gulp.src('views/**/*.pug')
+   .pipe(reload({stream:true}));
+});
+
+
+
+gulp.task('default', ['sass', 'browser-sync'], function() {
+  gulp.watch("sass/**/*.scss", ['sass']);
+   gulp.watch("views/**/*.pug", ['pug', browserSync.reload]);
 });
 
 gulp.task('browser-sync', ['nodemon'], function() {
@@ -18,12 +37,12 @@ gulp.task('browser-sync', ['nodemon'], function() {
 gulp.task('nodemon', function (cb) {
   var started = false;
   return nodemon({
-    script: 'servergulp.js'
+    script: 'server.js'
   }).on('start', function () {
     if (!started) {
       cb();
-      started = true; 
-    } 
+      started = true;
+    }
   });
 });
 

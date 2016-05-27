@@ -10,10 +10,12 @@ app.set('view engine' , 'pug');
 // Serves static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Routes
+
 var kaos = require('./routes/kaos');
 
+//Routes
 app.get('/', kaos.home);
+app.get('/projects', kaos.projects);
 
 // Server
 app.listen(PORT, function() {

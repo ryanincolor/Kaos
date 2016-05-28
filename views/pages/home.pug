@@ -1,16 +1,11 @@
 extends ../layout
 
 block content
-  nav.navbar
-    div
+  header.site-header
+    div.site-header__inner
       a.title="Familjen Kaos"
-      a.about="Tiffany & Bianca Kronlöf"      
-    section.navigation
-      div.expand-nav
-        div.bars
-          span.bar
-          span.bar
-          span.bar
+      a.about="Tiffany & Bianca Kronlöf"     
+    nav.site-nav 
       ul.primary
         li="Full Patte"
         li="Underdog"
@@ -21,6 +16,11 @@ block content
       ul.secondary
         li="About"
         li="Press"
+    div.expand-site-nav
+      div.bars
+        span.bar
+        span.bar
+        span.bar
   div.content
     section.hero
       h1.hero-title="Kaos"

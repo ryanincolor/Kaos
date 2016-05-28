@@ -1,0 +1,124 @@
+// Nabar
+// -----------------------------
+
+
+$site-nav-width: 300px;
+$site-header-width: 80px;
+
+.site-header {
+  position:fixed;
+  height: 100%;
+  width: $site-header-width;
+  top: 0;
+  left: 0;
+  transition: width 320ms cubic-bezier(0.7, 0, 0.3, 1);
+  z-index:99999;
+
+  a {
+    position: absolute;
+    transform: rotate(270deg);
+    transform-origin: 100% 50%;
+    right: 40px;
+    white-space: nowrap;
+  }
+
+  &.expanded {
+    width: $site-nav-width + $site-header-width;
+  }
+}
+
+.site-header__inner {
+  position: absolute;
+  width: $site-header-width;
+  height: 100%;
+  z-index: 2; 
+  background: white;
+
+  .title {
+    bottom: 16%;
+  }
+
+  .about {
+    top: 4%;
+    color: $light-grey;
+  }
+}
+
+.site-nav {
+  position: absolute;
+  height: 100%;
+  width: $site-nav-width;
+  margin-left: 80px;
+  background: white;
+  border-left: 1px solid rgba(0,0,0,.08);
+  box-shadow: 5px 0px 10px 1px rgba(0,0,0,.08);
+  transform:translateX(-100%);
+  transition: all .3s cubic-bezier(0.7, 0, 0.3, 1);
+
+
+  &.active {
+    transform:translateX(0%);
+
+    li {
+      animation: fadeUp 300ms ease-out;
+      animation-delay: 200ms;
+      animation-fill-mode:forwards;
+    }
+  }
+
+  ul.primary {
+    position: absolute;
+    top: 10%;
+    padding-left:48px;
+  }
+
+  ul.secondary {
+    position: absolute;
+    bottom: 24px;
+    padding-left:48px;
+  }
+
+  li {
+    opacity:0;
+    font-size: 20px;
+    margin-bottom: 48px;
+  }
+}
+
+.expand-site-nav {
+  position:absolute;
+  top: 50%;
+  background: white;
+  width:64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,.16);
+  transform: translateY(-50%);
+  right: -32px;
+  cursor: pointer;
+  z-index: 3;
+
+  .bars {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bar {
+    display: block;
+    height: 1px;
+    margin-bottom: 6px;
+    width: 24px;
+    background: #3076FF;
+    position: relative;
+    
+    &:nth-of-type(1){
+      width: 20px;
+    }
+
+     &:nth-of-type(3){
+      margin: 0;
+      width: 16px;
+    }
+  }
+}

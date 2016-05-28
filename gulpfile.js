@@ -6,8 +6,8 @@ var sass = require('gulp-sass');
 var reload = browserSync.reload;
 
 gulp.task('sass', function () {
-  return gulp.src('sass/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed', sourceComments: 'map'}).on('error', sass.logError))
+  return gulp.src('sass/style.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('public/styles'))
     .pipe(reload({stream:true}));
 });

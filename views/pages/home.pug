@@ -3,31 +3,40 @@ extends ../layout
 block content
   header.site-header
     div.site-header__inner
-      a.title="Familjen Kaos"
-      a.about="Tiffany & Bianca Kronlöf"     
-    nav.site-nav 
+      a(href="#").title="Familjen Kaos"
+      a(href="#").about="Tiffany & Bianca Kronlöf"     
+    nav.site-nav
       ul.primary
-        li="Full Patte"
-        li="Underdog"
-        li="Underdog"
-        li="Snubben"
-        li="Tiffany K"
-        li="Så Javla PK"
+        li.active
+          a(href="#project-fullpatte")="Full Patte"
+        li
+          a(href="#project-underdog")="Underdog"
+        li
+          a(href="#project-snubben")="Snubben"
+        li
+          a(href="#project-tiffanyK")="Tiffany K"
+        li
+          a(href="#project-javlapk")="Så Javla PK"
       ul.secondary
-        li="About"
-        li="Press"
+        li
+          a="About"
+        li
+          a="Press"
     div.expand-site-nav
       div.bars
         span.bar
         span.bar
         span.bar
+  section.projects
+    ul
+      li.project#project-fullpatte
+      li.project#project-underdog
+      li.project#project-snubben 
+      li.project#project-tiffanyK 
+      li.project#project-javlapk         
   div.content
     section.hero
       h1.hero-title="Kaos"
     section.work
-      ul
-        li.project
-        li.project
-        li.project
-    section.project
+
 

@@ -1,0 +1,14 @@
+[
+  { 
+    "id": 1,
+    "image": "", 
+    "name": "project_1",
+    "description": "project 1 description"
+  },
+  { 
+    "id": 2,
+    "image": "", 
+    "name": "project_2",
+    "description": "project 2 description"
+  }
+]

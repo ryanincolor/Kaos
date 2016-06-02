@@ -79,9 +79,6 @@ $site-header-width: 80px;
       }
     
       &.active a {
-        display: inline-block;
-        transform: scale(1.1);
-        transform-origin: center bottom;
         color: black;  
       }
     }

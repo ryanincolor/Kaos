@@ -26,12 +26,23 @@ a {
   text-decoration: none;
 }
 
+.heading--main{
+  position: relative;
+  font-family: $fontLight;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: white;
+  font-size: 128px;
+  letter-spacing: 140px;
+  text-align: center;
+  margin: 0 0 0 96px;
+}
+
 .content{
   position: absolute;
   top:0;
   left:80px;
   right: 0;
-  padding-bottom: 128px;
 
   .work {
     padding: 100px;
@@ -40,82 +51,83 @@ a {
 
 .hero {
   height: 50vh;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #FF5BC3;
   background: url('../images/hero.png');
   background-size: cover;
-
-  h1{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: $fontLight;
-    font-weight: 100;
-    text-transform: uppercase;
-    color: white;
-    font-size: 128px;
-    letter-spacing: 140px;
-    text-align: center;
-    margin: 0 0 0 96px;
-  }
 }
 
 .projects {
-  visibility: none;
-  transform: translateX(-100%);
-  transition: transform 500ms cubic-bezier(0.7, 0, 0.3, 1), opacity 100ms cubic-bezier(0.7, 0, 0.3, 1);
-  transition-delay: 200ms;
   position: absolute;
   top: 0;
-  right:0;
-  bottom: 0;
-  height: 100%;
-  background: white;
+  left: 0;
   width: 100vw;
-  z-index: 2; 
+  transform: translateX(-100%);
+  z-index: 2;
+  visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-delay: 100ms;
+  background: white;
 
   &.visible {
     visibility: visible;
-    opacity: 1;
     transform: translateY(0%);
     transition-delay: 300ms;
   }
 
   &.full-width ul {
-    padding-left: 0;
+  padding-left: 0px;
   }
 
   ul {
-    padding-left: $site-nav-width + $site-header-width;
-    transition: all 300ms cubic-bezier(0.7, 0, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transition: all 250ms cubic-bezier(0.7, 0, 0.3, 1);
+    padding-left:380px;
+    overflow: hidden;
   }
 
   .project {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 72vh;
-    background: #F1F1F3;
+    display: flex;
     transform: scale(1);
     transition: all 300ms cubic-bezier(0.7, 0, 0.3, 1);
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 
     a {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 99999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      z-index: 1;
+      background-size: cover;
+      transition: all 300ms cubic-bezier(0.7, 0, 0.3, 1);
+      padding: 64px;
+
+      span {
+        opacity: 0;
+        z-index: 1;
+        font-size: 4vw;
+        letter-spacing: 64px;
+      }
+
+      &:after {
+        content:"";
+        position: absolute;
+        top: 0;
+        left:0;
+        right: 0;
+        bottom:0;
+        transition: all 300ms cubic-bezier(0.7, 0, 0.3, 1);
+      }
     }
 
     &.active {
       height: 100vh;
+      transform: scale(1) !important;
     }
 
     &.hidden {
@@ -123,20 +135,14 @@ a {
       visibility: hidden;
     }
 
-    &:after {
-      content:"";
-      position: absolute;
-      top: 0;
-      left:0;
-      right: 0;
-      bottom:0;
-      transition: all 300ms cubic-bezier(0.7, 0, 0.3, 1);
-    }
-
     &:hover {
       transform: scale(1.1);
 
-      &:after {
+      span {
+        opacity: 1;
+      }
+
+      a:after {
         background: rgba(0,0,0,.64);
       }
     }

@@ -80,7 +80,7 @@ function showProjects() {
         setTimeout(function()
         {
              window.location.href = Link;
-        },500);
+        }, 400);
     });
 
 function closeProject() {

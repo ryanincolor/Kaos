@@ -26,9 +26,10 @@ html
           span.bar
     section.projects
       ul
-      each preview in projects
-        li.project(id="p-" + preview.slug style='background-image: url(../../images/' + preview.image + ');')
-          a(href='/project/' + preview.slug)
+        each preview in projects
+          li.project(id="p-" + preview.slug)
+            a(href='/project/' + preview.slug style='background-image: url(../../images/' + preview.image + ');')
+              span.heading--main=preview.name
     block content
     script(src='../../scripts/scripts.js')
 

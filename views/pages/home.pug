@@ -1,41 +1,7 @@
 extends ../layout
 
 block content
-  header.site-header
-    div.site-header__inner
-      a(href="#").title="Familjen Kaos"
-      a(href="#").about="Tiffany & Bianca Kronlöf"     
-    nav.site-nav
-      ul.primary
-        li.active
-          a(href="#project-fullpatte")="Full Patte"
-        li
-          a(href="#project-underdog")="Underdog"
-        li
-          a(href="#project-snubben")="Snubben"
-        li
-          a(href="#project-tiffanyK")="Tiffany K"
-        li
-          a(href="#project-javlapk")="Så Javla PK"
-      ul.secondary
-        li
-          a="About"
-        li
-          a="Press"
-    div.expand-site-nav
-      div.bars
-        span.bar
-        span.bar
-        span.bar
-  section.projects
-    ul
-      li.project-preview#project-fullpatte
-        //- a(href='/project/'+project.id)
-      li.project-preview#project-underdog
-      li.project-preview#project-snubben 
-      li.project-preview#project-tiffanyK 
-      li.project-preview#project-javlapk         
-  div.content
+  div.content.content--home
     section.hero
       h1.hero-title="Kaos"
     section.work

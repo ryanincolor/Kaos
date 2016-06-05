@@ -2,9 +2,33 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='styles/style.css')
+    link(rel='stylesheet', href='../../styles/style.css')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
   body
+    header.site-header
+      div.site-header__inner
+        a(href="#").title="Familjen Kaos"
+        a(href="#").about="Tiffany & Bianca Kronlöf"
+      nav.site-nav
+        ul.primary
+          each link in projects
+            li
+              a(href='#p-' + link.slug)=link.name
+        ul.secondary
+          li
+            a="About"
+          li
+            a="Press"
+      div.expand-site-nav
+        div.bars
+          span.bar
+          span.bar
+          span.bar
+    section.projects
+      ul
+      each preview in projects
+        li.project(id="p-" + preview.slug style='background-image: url(../../images/' + preview.image + ');')
+          a(href='/project/' + preview.slug)
     block content
-    script(src='scripts/scripts.js')
+    script(src='../../scripts/scripts.js')
 

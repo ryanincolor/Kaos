@@ -1,5 +1,25 @@
 extends ../layout
 
 block content
-  h1=project.name
-  p=project.description
+  div.p-actions
+    a(href='/').close
+      img(src="../../images/icon-close.svg")
+    a(href=next.slug).next
+      img(src="../../images/icon-arrow.svg")
+    a(href=prev.slug).prev
+      img(src="../../images/icon-arrow.svg")
+  div.content
+    section.hero.p--hero(style='background-image: url(../images/' + project.image + ')')
+      h1=project.name
+    main.project
+      section.p-intro
+        div.p-container
+          h1.p-intro__title=project.name
+          p.p-intro__text="När Bianca och Tiffa är tillbaka har systrarna blivit hemlösa. De är om möjligt ännu mer vilse i den svenska samhällsorienteringen. Deras liv fylls med tillfälligt jobb, tillfälligt boende och tillfälliga lösningar på permanenta problem. Till slut lämnas de med frågan: om världens mest jämställda land utan klasskillnader inte kan hjälpa dem, vart ska de då ta vägen?"
+      section.p-image
+        div.p-container
+          <iframe src="https://player.vimeo.com/video/109679041?title=0&byline=0&portrait=0" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+      section.p-full-width
+      section.p-gallary
+

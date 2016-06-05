@@ -20,7 +20,7 @@ function showProjects() {
       $siteNavLinks   = $('.site-nav .primary li'),
       $expand         = $('.expand-site-nav'),
       $projects       = $('.projects'),
-      $projectPreview = $('.project-preview');
+      $projectPreview = $('.project');
 
 
   $expand.on('click', function(){
@@ -48,30 +48,49 @@ function showProjects() {
     });
   });
 
-  $projectPreview.on('click', function() {
+  $projectPreview.on('click', function(e) {
     $siteNav.removeClass('active');
     $siteHeader.removeClass('expanded');
     $expand.removeClass('close');
     $projects.addClass('full-width');
     $projectPreview.addClass('hidden');
-    
+
     $(this).removeClass('hidden');
+
     $(this).addClass('active');
+  
 
     $('html,body').stop().animate({
       'scrollTop': $(this).offset().top
     }, 300, 'swing', function() {
-    
+
     });
-    
+
     setTimeout(function(){
       $projectPreview.not('.active').remove();
     }, 100);
   });
 }
 
-delayNavLinks() 
-showProjects() 
+
+  $(".project a").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass("active").next().slideToggle("slow");
+        var Link = $(this).attr("href");
+        setTimeout(function()
+        {
+             window.location.href = Link;
+        },500);
+    });
+
+function closeProject() {
+  $('p-actions').on('click', function(){
+
+  });
+}
+
+delayNavLinks()
+showProjects()
 
 
 

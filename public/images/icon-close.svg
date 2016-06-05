@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-4" transform="translate(-197.000000, -236.000000)" fill="#000000">
+            <g id="icon-close" transform="translate(204.006097, 242.945436) rotate(-45.000000) translate(-204.006097, -242.945436) translate(196.006097, 234.445436)">
+                <polygon id="Line-Copy" points="0.294601749 8.65964548 15.6138927 8.65964548 15.9084945 8.65964548 15.9084945 7.65964548 15.6138927 7.65964548 0.294601749 7.65964548 -2.55795385e-13 7.65964548 -2.55795385e-13 8.65964548"></polygon>
+                <polygon id="Line-Copy-2" transform="translate(7.954247, 8.159645) rotate(-90.000000) translate(-7.954247, -8.159645) " points="0.294601749 8.65964548 15.6138927 8.65964548 15.9084945 8.65964548 15.9084945 7.65964548 15.6138927 7.65964548 0.294601749 7.65964548 -1.15581618e-13 7.65964548 -1.15581618e-13 8.65964548"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

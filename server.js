@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+var jquery = require('jquery');
 
 
 
@@ -13,16 +14,22 @@ app.set('view engine' , 'pug');
 
 // Serves static files
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use(bodyParser.json());
 
 var kaos = require('./routes/kaos');
+
 
 //Routes
 app.get('/', kaos.home);
 app.get('/projects', kaos.projects);
-app.get('/project/:id', kaos.project);
+app.get('/project/:slug', kaos.project);
 // Server
 app.listen(PORT, function() {
   console.log('Listening on ' + PORT);
 });
+
+
+
+

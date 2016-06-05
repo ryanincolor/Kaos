@@ -1,14 +1,37 @@
 [
-  { 
+  {
     "id": 1,
-    "image": "", 
-    "name": "project_1",
-    "description": "project 1 description"
+    "slug": "fullpatte",
+    "image": "project-full-patte.png",
+    "name": "Full Patte",
+    "description": "När Bianca och Tiffa är tillbaka har systrarna blivit hemlösa. De är om möjligt ännu mer vilse i den svenska samhällsorienteringen. Deras liv fylls med tillfälligt jobb, tillfälligt boende och tillfälliga lösningar på permanenta problem. Till slut lämnas de med frågan: om världens mest jämställda land utan klasskillnader inte kan hjälpa dem, vart ska de då ta vägen?"
   },
-  { 
+  {
     "id": 2,
-    "image": "", 
-    "name": "project_2",
-    "description": "project 2 description"
+    "slug": "underdog",
+    "image": "2.png",
+    "name": "Underdog",
+    "description": "När Bianca och Tiffa är tillbaka har systrarna blivit hemlösa. De är om möjligt ännu mer vilse i den svenska samhällsorienteringen. Deras liv fylls med tillfälligt jobb, tillfälligt boende och tillfälliga lösningar på permanenta problem. Till slut lämnas de med frågan: om världens mest jämställda land utan klasskillnader inte kan hjälpa dem, vart ska de då ta vägen?"
+  },
+  {
+    "id": 3,
+    "slug": "tiffanyk",
+    "image": "3.png",
+    "name": "Tiffany K",
+    "description": "När Bianca och Tiffa är tillbaka har systrarna blivit hemlösa. De är om möjligt ännu mer vilse i den svenska samhällsorienteringen. Deras liv fylls med tillfälligt jobb, tillfälligt boende och tillfälliga lösningar på permanenta problem. Till slut lämnas de med frågan: om världens mest jämställda land utan klasskillnader inte kan hjälpa dem, vart ska de då ta vägen?"
+  },
+  {
+    "id": 4,
+    "slug": "sojavlapk",
+    "image": "project-full-patte.png",
+    "name": "Så Javla PK",
+    "description": "När Bianca och Tiffa är tillbaka har systrarna blivit hemlösa. De är om möjligt ännu mer vilse i den svenska samhällsorienteringen. Deras liv fylls med tillfälligt jobb, tillfälligt boende och tillfälliga lösningar på permanenta problem. Till slut lämnas de med frågan: om världens mest jämställda land utan klasskillnader inte kan hjälpa dem, vart ska de då ta vägen?"
+  },
+  {
+    "id": 5,
+    "slug": "snubben",
+    "image": "2.png",
+    "name": "Snubben",
+    "description": "När Bianca och Tiffa är tillbaka har systrarna blivit hemlösa. De är om möjligt ännu mer vilse i den svenska samhällsorienteringen. Deras liv fylls med tillfälligt jobb, tillfälligt boende och tillfälliga lösningar på permanenta problem. Till slut lämnas de med frågan: om världens mest jämställda land utan klasskillnader inte kan hjälpa dem, vart ska de då ta vägen?"
   }
 ]

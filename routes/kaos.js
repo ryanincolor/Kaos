@@ -3,9 +3,14 @@ var kaosProjects = require('./../data/projects.json');
 
 var allProjects = projects.getProjects(kaosProjects);
 
-exports.home = function(req, res) {
-   res.render('pages/home', {projects: allProjects});
+
+exports.dashboard = function(req, res) {
+   res.render('pages/dashboard');
 };
+
+// exports.home = function(req, res) {
+    
+// };
 
 exports.projects = function(req, res) {
   res.render('pages/projects', {title: "Familjen Kaos Projects"});
